@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${pretendard.variable} ${poppins.variable} antialiased mx-auto max-w-7xl w-full`}>
+            <body className={`${pretendard.variable} ${poppins.variable} antialiased w-full text-base`}>
                 <header>
                     <Header />
                 </header>

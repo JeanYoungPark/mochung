@@ -1,0 +1,27 @@
+.header {
+    @apply w-full border-slate-300 border-b;
+}
+
+.container {
+    @apply w-full mx-auto max-w-7xl;
+}
+
+.authWrapper {
+    @apply flex justify-between py-10;
+}
+
+.authList {
+    @apply flex gap-5 text-xs text-slate-500;
+}
+
+.menuWrapper {
+    @apply flex justify-between py-4;
+}
+
+.mainMenu {
+    @apply flex gap-20 text-lg font-bold;
+}
+
+.etcMenu {
+    @apply flex gap-6;
+}
