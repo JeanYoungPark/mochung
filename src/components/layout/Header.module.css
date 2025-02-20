@@ -11,7 +11,7 @@
 }
 
 .authList {
-    @apply flex gap-5 text-xs text-slate-500;
+    @apply flex gap-5 text-base text-slate-500;
 }
 
 .menuWrapper {
@@ -19,7 +19,7 @@
 }
 
 .mainMenu {
-    @apply flex gap-20 text-lg font-bold;
+    @apply flex gap-20 text-2xl font-bold;
 }
 
 .etcMenu {

@@ -19,5 +19,5 @@
 }
 
 .companyInfoList {
-    @apply text-slate-600 flex flex-col gap-1;
+    @apply text-slate-600 flex flex-col gap-1 text-base;
 }
