@@ -15,7 +15,12 @@
 } */
 
 body {
+    min-width: 380px;
     color: var(--foreground);
     background: var(--background);
     font-family: var(--font-pretendard), var(--font-poppins), sans-serif;
+}
+
+.container {
+    @apply w-full mx-auto max-w-7xl px-5 xl:px-0;
 }

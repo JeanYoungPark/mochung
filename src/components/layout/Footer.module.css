@@ -2,16 +2,16 @@
     @apply w-full border-slate-500 border-t;
 }
 
-.container {
-    @apply w-full mx-auto max-w-7xl;
+.logo {
+    @apply hidden xl:block;
 }
 
 .etcInfoWrapper {
-    @apply flex justify-between py-5;
+    @apply flex justify-center py-5 xl:justify-between;
 }
 
 .etcList {
-    @apply flex gap-6;
+    @apply flex gap-6 text-sm xl:text-lg;
 }
 
 .companyInfoWrapper {
@@ -19,5 +19,5 @@
 }
 
 .companyInfoList {
-    @apply text-slate-600 flex flex-col gap-1 text-base;
+    @apply text-slate-600 flex flex-col gap-1 text-sm xl:text-base;
 }

@@ -2,16 +2,24 @@
     @apply w-full border-slate-300 border-b;
 }
 
-.container {
-    @apply w-full mx-auto max-w-7xl;
+.authWrapper {
+    @apply relative flex justify-between py-10 xl:justify-end;
 }
 
-.authWrapper {
-    @apply flex justify-between py-10;
+.logo {
+    @apply absolute left-[50%] translate-x-[-50%] xl:left-0 xl:translate-x-0;
 }
 
 .authList {
-    @apply flex gap-5 text-base text-slate-500;
+    @apply hidden gap-5 text-base text-slate-500 xl:flex xl:justify-end;
+}
+
+.iconWrapper {
+    @apply flex w-full justify-between xl:hidden;
+}
+
+.menuIcon {
+    @apply w-7 h-7;
 }
 
 .menuWrapper {
@@ -19,9 +27,17 @@
 }
 
 .mainMenu {
-    @apply flex gap-20 text-2xl font-bold;
+    @apply flex text-xl xl:text-2xl font-bold;
+}
+
+.mainMenuItem {
+    @apply min-w-[140px] text-center xl:text-left;
 }
 
 .etcMenu {
-    @apply flex gap-6;
+    @apply hidden gap-6 xl:flex;
+}
+
+.drawer {
+    @apply hidden fixed top-0 left-0 w-lvw h-lvh;
 }
