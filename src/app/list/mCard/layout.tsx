@@ -13,5 +13,5 @@ export default function MCardLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <div>mCard layout {children}</div>;
+    return <div className='grid grid-cols-4 gap-3'>{children}</div>;
 }
