@@ -1,0 +1,23 @@
+.footer {
+    @apply w-full border-slate-500 border-t;
+}
+
+.logo {
+    @apply hidden xl:block;
+}
+
+.etcInfoWrapper {
+    @apply flex justify-center py-5 xl:justify-between;
+}
+
+.etcList {
+    @apply flex gap-6 text-sm xl:text-lg;
+}
+
+.companyInfoWrapper {
+    @apply py-5 border-slate-300 border-t;
+}
+
+.companyInfoList {
+    @apply text-slate-600 flex flex-col gap-1 text-sm xl:text-base;
+}

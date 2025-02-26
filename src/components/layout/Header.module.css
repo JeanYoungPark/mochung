@@ -1,0 +1,43 @@
+.header {
+    @apply w-full border-slate-300 border-b;
+}
+
+.authWrapper {
+    @apply relative flex justify-between py-10 xl:justify-end;
+}
+
+.logo {
+    @apply absolute left-[50%] translate-x-[-50%] xl:left-0 xl:translate-x-0;
+}
+
+.authList {
+    @apply hidden gap-5 text-base text-slate-500 xl:flex xl:justify-end;
+}
+
+.iconWrapper {
+    @apply flex w-full justify-between xl:hidden;
+}
+
+.menuIcon {
+    @apply w-7 h-7;
+}
+
+.menuWrapper {
+    @apply flex justify-between py-4;
+}
+
+.mainMenu {
+    @apply flex text-xl xl:text-2xl font-bold;
+}
+
+.mainMenuItem {
+    @apply min-w-[140px] text-center xl:text-left;
+}
+
+.etcMenu {
+    @apply hidden gap-6 xl:flex;
+}
+
+.drawer {
+    @apply hidden fixed top-0 left-0 w-lvw h-lvh;
+}
