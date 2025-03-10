@@ -7,7 +7,7 @@ export default function layout({
 }>) {
     return (
         <div className='container'>
-            <div className='py-10'>list layout {children}</div>
+            <div className='py-10'>{children}</div>
         </div>
     );
 }

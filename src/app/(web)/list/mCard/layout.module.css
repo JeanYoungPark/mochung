@@ -1,0 +1,17 @@
+.wrapper {
+    @apply relative flex flex-col gap-7 items-center justify-center p-7 mb-10 w-full md:w-1/3 xl:w-1/4 transition-all duration-500 cursor-pointer hover:bg-gray-100;
+}
+
+.cardWrapper {
+    @apply h-full max-h-[80%];
+}
+
+.cardImage {
+    @apply w-auto h-full object-contain rounded-lg shadow-[8px_8px_16px_0_rgba(0,0,0,0.1)];
+}
+.infoWrapper {
+    @apply flex flex-col gap-2 w-full break-all;
+}
+.modalIcon {
+    @apply absolute bottom-7 right-7 fill-white stroke-gray-600 opacity-0 invisible transition-all duration-300 hover:scale-125;
+}

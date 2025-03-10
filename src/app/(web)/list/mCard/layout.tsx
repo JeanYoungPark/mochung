@@ -13,5 +13,5 @@ export default function MCardLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return <div>mCard layout {children}</div>;
+    return <div className='flex flex-wrap transition-all duration-300'>{children}</div>;
 }

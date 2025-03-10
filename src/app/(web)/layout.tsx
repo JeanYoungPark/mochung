@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { poppins, pretendard } from "../fonts";
+import { poppins, pretendard } from "../../fonts";
 
 export const metadata: Metadata = {
     title: {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body className={`${pretendard.variable} ${poppins.variable} antialiased w-full text-lg`}>
+            <body className={`${pretendard.variable} ${poppins.variable} antialiased w-screen min-w-sm overflow-x-hidden text-lg`}>
                 <header>
                     <Header />
                 </header>
