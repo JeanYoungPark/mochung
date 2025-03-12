@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mochung - 모바일 청첩장 서비스
 
-## Getting Started
+Mochung은 모바일 청첩장 서비스 웹 애플리케이션입니다. 사용자가 쉽게 결혼식 초대장을 생성하고 공유할 수 있도록 설계되었습니다.
 
-First, run the development server:
+## 🚀 기술 스택
+
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **State Management**: Zustand (예정)
+- **Deployment**: Vercel (예정)
+
+## 📂 프로젝트 구조
+
+```
+mochung/
+├── public/          # 정적 파일 (이미지, 아이콘 등)
+├── src/             # 소스 코드
+│   ├── app/        # 페이지 및 레이아웃
+│   ├── components/ # 재사용 가능한 UI 컴포넌트
+│   ├── hooks/      # 커스텀 훅
+│   ├── utils/      # 유틸리티 함수
+│   ├── styles/     # 전역 스타일 및 Tailwind 설정
+│   ├── store/      # Zustand 상태 관리 (예정)
+├── .gitignore       # Git 무시 파일 목록
+├── package.json     # 프로젝트 설정 및 의존성
+├── README.md        # 프로젝트 설명 파일
+└── tsconfig.json    # TypeScript 설정
+```
+
+## 📌 실행 방법
+
+### 1. 프로젝트 클론
+
+```bash
+git clone https://github.com/JeanYoungPark/mochung.git
+cd mochung
+```
+
+### 2. 패키지 설치
+
+```bash
+npm install
+# 또는
+yarn install
+```
+### 3. 개발 서버 실행
 
 ```bash
 npm run dev
-# or
+# 또는
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+로컬에서 `http://localhost:3000`에 접속하여 확인할 수 있습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📌 주요 기능 (예정)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 초대장 템플릿 선택 및 커스터마이징
+- 결혼식 일정 및 장소 정보 입력
+- 초대 링크 공유 기능
+- RSVP(참석 여부) 응답 수집
+- 사진 및 동영상 업로드 지원
 
-## Learn More
+## 📄 라이선스
 
-To learn more about Next.js, take a look at the following resources:
+이 프로젝트는 MIT 라이선스를 따릅니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+추가 기능이나 개선 아이디어가 있다면 [Issue](https://github.com/JeanYoungPark/mochung/issues)를 남겨주세요! 😊
