@@ -19,6 +19,7 @@ body {
     color: var(--foreground);
     background: var(--background);
     font-family: var(--font-pretendard), var(--font-poppins), sans-serif;
+    -webkit-padding-start: 0px;
 }
 
 .container {

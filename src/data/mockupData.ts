@@ -1,4 +1,6 @@
-export const data = [
+import { dataType } from "@/types/dataType";
+
+export const data: NonNullable<dataType[]> = [
     {
         id: 1,
         title: "sincere moment",
@@ -6,6 +8,7 @@ export const data = [
         type: 1,
         thumbnail: 1,
         previewName: "thumbnail01",
+        qr: 3,
         price: 50000,
         reg_date: "",
         up_date: "",
@@ -17,6 +20,7 @@ export const data = [
         type: 1,
         thumbnail: 1,
         previewName: "thumbnail01",
+        qr: 3,
         price: 30000,
         reg_date: "",
         up_date: "",
@@ -45,6 +49,12 @@ export const img = [
         id: 2,
         img: "thumbnail_preview_01.png",
         alt: "thumbnail_preview_01",
+        size: 1000,
+    },
+    {
+        id: 3,
+        img: "qr_01.png",
+        alt: "qr_01",
         size: 1000,
     },
 ];

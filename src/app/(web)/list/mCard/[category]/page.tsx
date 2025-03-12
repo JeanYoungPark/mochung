@@ -8,16 +8,17 @@ import { Modal } from "@/components/common/Modal";
 import { useModal } from "@/hooks/useModal";
 import { categoryData, data, img, typeData } from "@/data/mockupData";
 import formatNumberWithCommas from "@/utils/formatNumber";
+import Link from "next/link";
 
 type Props = {
     params: Promise<{ category: string }>;
 };
 
 export default function CategoryPage({ params }: Props) {
-    // const { category } = use(params);
+    const { category } = use(params);
     const [imageLoadError, setImageLoadError] = useState<boolean[]>([]);
     const { isOpen, openModal, closeModal } = useModal();
-    const [prevUrl, setPrevUrl] = useState<string | null>(null);
+    const [prevUrl, setPrevUrl] = useState<NonNullable<string>>();
 
     const showModal = ({ url }: { url: string }) => {
         setPrevUrl(url);
@@ -34,25 +35,29 @@ export default function CategoryPage({ params }: Props) {
                     <div key={i} className={`group ${styles.wrapper}`}>
                         <div className={styles.cardWrapper}>
                             {!imageLoadError[i] && (
-                                <Image
-                                    // src={`/images/list/mCard/${category}/thumbnail_${formatNumber(i + 1)}.png`}
-                                    src={imgUrl}
-                                    alt={img[item.thumbnail - 1].alt}
-                                    width={300}
-                                    height={300}
-                                    className={styles.cardImage}
-                                    onError={() => setImageLoadError((prev) => ({ ...prev, [i]: true }))}
-                                />
+                                <Link href={`/detail/mCard/${category}/${item.id}`}>
+                                    <Image
+                                        // src={`/images/list/mCard/${category}/thumbnail_${formatNumber(i + 1)}.png`}
+                                        src={imgUrl}
+                                        alt={img[item.thumbnail - 1].alt}
+                                        width={300}
+                                        height={300}
+                                        className={styles.cardImage}
+                                        onError={() => setImageLoadError((prev) => ({ ...prev, [i]: true }))}
+                                    />
+                                </Link>
                             )}
                         </div>
                         <div className={styles.infoWrapper}>
-                            <p>
-                                <strong className='text-xl'>{item.title}</strong>
-                                {/* <span className='relative pl-3 ml-3 text-gray-400 text-base before:block before:w-px before:h-3 before:bg-gray-400 before:absolute before:left-0 before:top-[3px]'>
+                            <Link href={`/detail/mCard/${category}/${item.id}`}>
+                                <p>
+                                    <strong className='text-xl'>{item.title}</strong>
+                                    {/* <span className='relative pl-3 ml-3 text-gray-400 text-base before:block before:w-px before:h-3 before:bg-gray-400 before:absolute before:left-0 before:top-[3px]'>
                                     MC1606
                                 </span> */}
-                            </p>
-                            <p className='text-base'>{formatNumberWithCommas(item.price)}원</p>
+                                </p>
+                                <p className='text-base'>{formatNumberWithCommas(item.price)}원</p>
+                            </Link>
                         </div>
                         <ZoomIn
                             className={`${styles.modalIcon} group-hover:opacity-100 group-hover:visible`}
@@ -71,7 +76,7 @@ export default function CategoryPage({ params }: Props) {
                 );
             })}
 
-            <Modal isOpen={isOpen} closeModal={closeModal} width='w-[600px]' height='h-[800px]' prevUrl={prevUrl} />
+            {prevUrl && <Modal isOpen={isOpen} closeModal={closeModal} width='w-[600px]' height='h-[800px]' prevUrl={prevUrl} />}
         </>
     );
 }

@@ -1,0 +1,26 @@
+.wrapper {
+}
+
+.leftWrapper {
+    @apply flex justify-center items-center w-full h-[700px] bg-gray-100;
+}
+
+.innerWrapper {
+    @apply w-full max-w-[400px] h-full max-h-[600px];
+}
+
+.rightWrapper {
+    @apply w-full lg:w-2/5 min-w-[40%] pt-10 lg:pl-20 lg:pt-0;
+}
+
+.title {
+    @apply w-full text-3xl pb-5 font-bold border-b border-gray-300;
+}
+
+.infoWrapper {
+    @apply flex flex-col gap-3 py-8;
+}
+
+.infoTitle {
+    @apply w-[100px] min-w-[100px] text-gray-500;
+}
